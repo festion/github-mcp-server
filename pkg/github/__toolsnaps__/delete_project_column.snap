@@ -1,0 +1,24 @@
+{
+  "annotations": {
+    "title": "Delete project column",
+    "readOnlyHint": false
+  },
+  "description": "Delete a column from a project board with proper validation",
+  "inputSchema": {
+    "properties": {
+      "archive_cards": {
+        "description": "Whether to archive cards in the column (default: true)",
+        "type": "boolean"
+      },
+      "column_id": {
+        "description": "ID of the column to delete",
+        "type": "string"
+      }
+    },
+    "required": [
+      "column_id"
+    ],
+    "type": "object"
+  },
+  "name": "delete_project_column"
+}

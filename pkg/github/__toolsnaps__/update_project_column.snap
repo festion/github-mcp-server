@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "title": "Update project column",
+    "readOnlyHint": false
+  },
+  "description": "Update properties and configurations of an existing project column",
+  "inputSchema": {
+    "properties": {
+      "color": {
+        "description": "New color for the column (hex format)",
+        "type": "string"
+      },
+      "column_id": {
+        "description": "ID of the column to update",
+        "type": "string"
+      },
+      "description": {
+        "description": "New description for the column",
+        "type": "string"
+      },
+      "limit": {
+        "description": "New WIP limit for the column",
+        "type": "number"
+      },
+      "name": {
+        "description": "New name for the column",
+        "type": "string"
+      }
+    },
+    "required": [
+      "column_id"
+    ],
+    "type": "object"
+  },
+  "name": "update_project_column"
+}

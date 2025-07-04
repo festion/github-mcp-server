@@ -1,0 +1,25 @@
+{
+  "annotations": {
+    "title": "Reorder project columns",
+    "readOnlyHint": false
+  },
+  "description": "Change the order of columns within a project board",
+  "inputSchema": {
+    "properties": {
+      "board_id": {
+        "description": "ID of the project board",
+        "type": "string"
+      },
+      "column_order": {
+        "description": "Array of column IDs in the desired order",
+        "type": "array"
+      }
+    },
+    "required": [
+      "board_id",
+      "column_order"
+    ],
+    "type": "object"
+  },
+  "name": "reorder_project_columns"
+}

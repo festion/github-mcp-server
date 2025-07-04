@@ -1,0 +1,37 @@
+{
+  "annotations": {
+    "title": "List project boards",
+    "readOnlyHint": true
+  },
+  "description": "List all accessible project boards for a user or organization",
+  "inputSchema": {
+    "properties": {
+      "include_closed": {
+        "description": "Include closed project boards (default: false)",
+        "type": "boolean"
+      },
+      "limit": {
+        "description": "Maximum number of boards to return (default: 20, max: 100)",
+        "type": "number"
+      },
+      "owner": {
+        "description": "User or organization login",
+        "type": "string"
+      },
+      "type": {
+        "description": "Filter by owner type (user or organization)",
+        "enum": [
+          "user",
+          "organization",
+          "all"
+        ],
+        "type": "string"
+      }
+    },
+    "required": [
+      "owner"
+    ],
+    "type": "object"
+  },
+  "name": "list_project_boards"
+}

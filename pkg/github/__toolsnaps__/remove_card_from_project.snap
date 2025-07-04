@@ -1,0 +1,24 @@
+{
+  "annotations": {
+    "title": "Remove card from project",
+    "readOnlyHint": false
+  },
+  "description": "Remove a card from a project board or archive it",
+  "inputSchema": {
+    "properties": {
+      "archive": {
+        "description": "Archive the card instead of removing",
+        "type": "boolean"
+      },
+      "card_id": {
+        "description": "ID of the card to remove",
+        "type": "string"
+      }
+    },
+    "required": [
+      "card_id"
+    ],
+    "type": "object"
+  },
+  "name": "remove_card_from_project"
+}

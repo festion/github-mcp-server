@@ -1,0 +1,29 @@
+{
+  "annotations": {
+    "title": "Add card to project",
+    "readOnlyHint": false
+  },
+  "description": "Add an existing issue or pull request to a project board",
+  "inputSchema": {
+    "properties": {
+      "board_id": {
+        "description": "ID of the project board",
+        "type": "string"
+      },
+      "column_id": {
+        "description": "ID of the column to add the card to (optional)",
+        "type": "string"
+      },
+      "content_id": {
+        "description": "ID of the issue or pull request to add",
+        "type": "string"
+      }
+    },
+    "required": [
+      "board_id",
+      "content_id"
+    ],
+    "type": "object"
+  },
+  "name": "add_card_to_project"
+}

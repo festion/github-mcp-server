@@ -1,0 +1,29 @@
+{
+  "annotations": {
+    "title": "Move project card",
+    "readOnlyHint": false
+  },
+  "description": "Move a project card to a different column",
+  "inputSchema": {
+    "properties": {
+      "card_id": {
+        "description": "ID of the card to move",
+        "type": "string"
+      },
+      "column_id": {
+        "description": "ID of the target column",
+        "type": "string"
+      },
+      "position": {
+        "description": "Position in column (top, bottom)",
+        "type": "string"
+      }
+    },
+    "required": [
+      "card_id",
+      "column_id"
+    ],
+    "type": "object"
+  },
+  "name": "move_project_card"
+}

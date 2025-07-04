@@ -1,0 +1,25 @@
+{
+  "annotations": {
+    "title": "Update project card",
+    "readOnlyHint": false
+  },
+  "description": "Update properties and custom fields of a project card",
+  "inputSchema": {
+    "properties": {
+      "card_id": {
+        "description": "ID of the card to update",
+        "type": "string"
+      },
+      "fields": {
+        "description": "Custom field values to update",
+        "properties": {},
+        "type": "object"
+      }
+    },
+    "required": [
+      "card_id"
+    ],
+    "type": "object"
+  },
+  "name": "update_project_card"
+}

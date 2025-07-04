@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "title": "Bulk move cards",
+    "readOnlyHint": false
+  },
+  "description": "Move multiple cards between columns in bulk",
+  "inputSchema": {
+    "properties": {
+      "card_ids": {
+        "description": "Array of card IDs to move",
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "target_column_id": {
+        "description": "ID of the target column",
+        "type": "string"
+      }
+    },
+    "required": [
+      "card_ids",
+      "target_column_id"
+    ],
+    "type": "object"
+  },
+  "name": "bulk_move_cards"
+}

@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "title": "Update project board",
+    "readOnlyHint": false
+  },
+  "description": "Update settings and metadata of an existing project board",
+  "inputSchema": {
+    "properties": {
+      "board_id": {
+        "description": "ID of the project board to update",
+        "type": "string"
+      },
+      "closed": {
+        "description": "Close or reopen the project board",
+        "type": "boolean"
+      },
+      "description": {
+        "description": "New description for the project board",
+        "type": "string"
+      },
+      "public": {
+        "description": "Update visibility of the project board",
+        "type": "boolean"
+      },
+      "short_description": {
+        "description": "New short description for the project board",
+        "type": "string"
+      },
+      "title": {
+        "description": "New title for the project board",
+        "type": "string"
+      }
+    },
+    "required": [
+      "board_id"
+    ],
+    "type": "object"
+  },
+  "name": "update_project_board"
+}

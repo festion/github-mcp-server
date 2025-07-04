@@ -1,0 +1,25 @@
+{
+  "annotations": {
+    "title": "Delete project board",
+    "readOnlyHint": false
+  },
+  "description": "Delete or archive a project board",
+  "inputSchema": {
+    "properties": {
+      "board_id": {
+        "description": "ID of the project board to delete",
+        "type": "string"
+      },
+      "confirm": {
+        "description": "Confirmation flag to prevent accidental deletion",
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "board_id",
+      "confirm"
+    ],
+    "type": "object"
+  },
+  "name": "delete_project_board"
+}

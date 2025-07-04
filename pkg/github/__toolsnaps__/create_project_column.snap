@@ -1,0 +1,37 @@
+{
+  "annotations": {
+    "title": "Create project column",
+    "readOnlyHint": false
+  },
+  "description": "Create a new column in a project board with customizable settings",
+  "inputSchema": {
+    "properties": {
+      "board_id": {
+        "description": "ID of the project board",
+        "type": "string"
+      },
+      "color": {
+        "description": "Color for the column (hex format)",
+        "type": "string"
+      },
+      "description": {
+        "description": "Description of the column",
+        "type": "string"
+      },
+      "limit": {
+        "description": "Work in progress (WIP) limit for the column",
+        "type": "number"
+      },
+      "name": {
+        "description": "Name of the column",
+        "type": "string"
+      }
+    },
+    "required": [
+      "board_id",
+      "name"
+    ],
+    "type": "object"
+  },
+  "name": "create_project_column"
+}

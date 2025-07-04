@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "title": "Get project board details",
+    "readOnlyHint": true
+  },
+  "description": "Get detailed information and statistics for a specific project board",
+  "inputSchema": {
+    "properties": {
+      "board_id": {
+        "description": "ID of the project board",
+        "type": "string"
+      },
+      "include_fields": {
+        "description": "Include field definitions (default: true)",
+        "type": "boolean"
+      },
+      "include_stats": {
+        "description": "Include item statistics (default: true)",
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "board_id"
+    ],
+    "type": "object"
+  },
+  "name": "get_project_board"
+}

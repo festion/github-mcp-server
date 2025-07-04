@@ -1,0 +1,20 @@
+{
+  "annotations": {
+    "title": "Get project column details",
+    "readOnlyHint": true
+  },
+  "description": "Get detailed column information and statistics",
+  "inputSchema": {
+    "properties": {
+      "column_id": {
+        "description": "ID of the column",
+        "type": "string"
+      }
+    },
+    "required": [
+      "column_id"
+    ],
+    "type": "object"
+  },
+  "name": "get_project_column"
+}

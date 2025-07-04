@@ -158,6 +158,30 @@ func DefaultToolsetGroup(readOnly bool, getClient GetClientFn, getGQLClient GetG
 		)
 
 	// Add toolsets to the group
+	// Create projects toolset
+	projects := toolsets.NewToolset("projects", "GitHub Projects board management").
+		AddReadTools(
+			toolsets.NewServerTool(ListProjectBoards(getGQLClient, t)),
+			toolsets.NewServerTool(GetProjectBoard(getGQLClient, t)),
+			toolsets.NewServerTool(ListProjectColumns(getGQLClient, t)),
+			toolsets.NewServerTool(GetProjectColumn(getGQLClient, t)),
+			// Card read operations will be added in Phase 2
+		).
+		AddWriteTools(
+			toolsets.NewServerTool(CreateProjectBoard(getGQLClient, t)),
+			toolsets.NewServerTool(UpdateProjectBoard(getGQLClient, t)),
+			toolsets.NewServerTool(DeleteProjectBoard(getGQLClient, t)),
+			toolsets.NewServerTool(CreateProjectColumn(getGQLClient, t)),
+			toolsets.NewServerTool(UpdateProjectColumn(getGQLClient, t)),
+			toolsets.NewServerTool(DeleteProjectColumn(getGQLClient, t)),
+			toolsets.NewServerTool(ReorderProjectColumns(getGQLClient, t)),
+			toolsets.NewServerTool(AddCardToProjectSimple(getGQLClient, t)),
+			toolsets.NewServerTool(MoveProjectCardSimple(getGQLClient, t)),
+			toolsets.NewServerTool(UpdateProjectCardSimple(getGQLClient, t)),
+			toolsets.NewServerTool(RemoveCardFromProjectSimple(getGQLClient, t)),
+			toolsets.NewServerTool(BulkMoveCardsSimple(getGQLClient, t)),
+		)
+
 	tsg.AddToolset(contextTools)
 	tsg.AddToolset(repos)
 	tsg.AddToolset(issues)
@@ -171,6 +195,7 @@ func DefaultToolsetGroup(readOnly bool, getClient GetClientFn, getGQLClient GetG
 	tsg.AddToolset(notifications)
 	tsg.AddToolset(experiments)
 	tsg.AddToolset(discussions)
+	tsg.AddToolset(projects)
 
 	return tsg
 }

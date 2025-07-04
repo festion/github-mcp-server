@@ -1,0 +1,20 @@
+{
+  "annotations": {
+    "title": "List project columns",
+    "readOnlyHint": true
+  },
+  "description": "List all columns for a specific project board",
+  "inputSchema": {
+    "properties": {
+      "board_id": {
+        "description": "ID of the project board",
+        "type": "string"
+      }
+    },
+    "required": [
+      "board_id"
+    ],
+    "type": "object"
+  },
+  "name": "list_project_columns"
+}
