@@ -72,6 +72,8 @@ func Test_ProjectCardTools(t *testing.T) {
 		{"update_project_card", UpdateProjectCardSimple},
 		{"remove_card_from_project", RemoveCardFromProjectSimple},
 		{"bulk_move_cards", BulkMoveCardsSimple},
+		{"list_project_cards", ListProjectCards},
+		{"get_project_card", GetProjectCard},
 	}
 
 	for _, tt := range tests {

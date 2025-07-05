@@ -1,0 +1,24 @@
+{
+  "annotations": {
+    "title": "Get project card",
+    "readOnlyHint": true
+  },
+  "description": "Get detailed information about a specific project card",
+  "inputSchema": {
+    "properties": {
+      "card_id": {
+        "description": "ID of the card to retrieve",
+        "type": "string"
+      },
+      "include_history": {
+        "description": "Include card history and timeline",
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "card_id"
+    ],
+    "type": "object"
+  },
+  "name": "get_project_card"
+}

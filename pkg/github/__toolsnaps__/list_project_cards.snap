@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "title": "List project cards",
+    "readOnlyHint": true
+  },
+  "description": "List cards in a project board with filtering options",
+  "inputSchema": {
+    "properties": {
+      "after": {
+        "description": "Cursor for pagination",
+        "type": "string"
+      },
+      "board_id": {
+        "description": "ID of the project board",
+        "type": "string"
+      },
+      "column_id": {
+        "description": "Filter by specific column",
+        "type": "string"
+      },
+      "content_type": {
+        "description": "Filter by content type (issue, pull_request)",
+        "type": "string"
+      },
+      "include_archived": {
+        "description": "Include archived cards",
+        "type": "boolean"
+      },
+      "limit": {
+        "description": "Maximum number of cards to return",
+        "type": "number"
+      }
+    },
+    "required": [
+      "board_id"
+    ],
+    "type": "object"
+  },
+  "name": "list_project_cards"
+}

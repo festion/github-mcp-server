@@ -165,7 +165,8 @@ func DefaultToolsetGroup(readOnly bool, getClient GetClientFn, getGQLClient GetG
 			toolsets.NewServerTool(GetProjectBoard(getGQLClient, t)),
 			toolsets.NewServerTool(ListProjectColumns(getGQLClient, t)),
 			toolsets.NewServerTool(GetProjectColumn(getGQLClient, t)),
-			// Card read operations will be added in Phase 2
+			toolsets.NewServerTool(ListProjectCards(getGQLClient, t)),
+			toolsets.NewServerTool(GetProjectCard(getGQLClient, t)),
 		).
 		AddWriteTools(
 			toolsets.NewServerTool(CreateProjectBoard(getGQLClient, t)),
